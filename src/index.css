@@ -1,0 +1,64 @@
+:root {
+  --bg: #eae0cf;
+  --surface: #f8f4ec;
+  --text: #111844;
+  --muted: color-mix(in srgb, var(--text) 72%, var(--bg));
+  --primary: #4b5694;
+  --on-primary: #f8f4ec;
+  --accent: #4b5694;
+  --soft: rgba(75, 86, 148, 0.16);
+  --border: rgba(17, 24, 68, 0.14);
+  --error: #b3261e;
+  --shadow: 0 6px 24px rgba(17, 24, 68, 0.08);
+  --radius: 16px;
+  color-scheme: light;
+}
+
+:root[data-tema='oscuro'] {
+  --bg: #111844;
+  --surface: #1a2257;
+  --text: #eae0cf;
+  --primary: #eae0cf;
+  --on-primary: #111844;
+  --accent: #7288ae;
+  --soft: rgba(114, 136, 174, 0.22);
+  --border: rgba(234, 224, 207, 0.16);
+  --error: #ff9a8f;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
