@@ -1,143 +1,121 @@
-/* ---------- Paneles y formularios ---------- */
-.panel {
-  padding: 1.25rem;
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
 }
 
-.etiqueta {
-  display: block;
-  font-weight: 700;
-}
-
-.campo {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-}
-
-.campo::placeholder {
-  color: var(--muted);
-}
-
-textarea.campo {
-  min-height: 90px;
-  resize: vertical;
-}
-
-.buscador__fila {
+.navbar__interior {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding-block: 0.75rem;
 }
 
-.formulario {
-  display: grid;
-  justify-items: start;
-  gap: 0.6rem;
-}
-
-.resultados {
-  margin: 1.5rem 0 1rem;
-  color: var(--muted);
-}
-
-/* ---------- Estrella y estados ---------- */
-.estrella {
-  padding: 0.25rem;
-  background: none;
-  border: 0;
-  font-size: 1.7rem;
-  line-height: 1;
+.navbar__marca {
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--accent);
-  cursor: pointer;
 }
 
-.estado {
-  padding: 2.5rem 1rem;
-  text-align: center;
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.navbar__link {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
   color: var(--muted);
 }
 
-.estado--error {
-  color: var(--error);
-  font-weight: 700;
+.navbar__link:hover {
+  color: var(--text);
 }
 
-/* ---------- Guardados ---------- */
-.seccion {
-  margin-top: 3rem;
+.navbar__link.active {
+  background: var(--soft);
+  color: var(--accent);
 }
 
-.seccion__titulo {
-  margin: 0 0 1rem;
-  font-size: 1.5rem;
+/* ---------- Inicio ---------- */
+.hero {
+  padding: 2rem 0;
+  text-align: center;
 }
 
-.guardados {
+.hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.estadisticas {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  margin: 0;
+  margin-top: 2rem;
+}
+
+.dato strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.dato span {
+  color: var(--muted);
+}
+
+/* ---------- Detalle ---------- */
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.detalle__img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.detalle__lista {
+  margin: 0 0 1.5rem;
   padding: 0;
   list-style: none;
 }
 
-.guardado {
-  display: grid;
-  grid-template-columns: 96px 1fr auto;
-  gap: 1rem;
-  align-items: start;
+.detalle__lista li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.guardado__img {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  border-radius: 12px;
+.detalle__quitar {
+  margin-top: 0.75rem;
 }
 
-.guardado__nombre {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 640px) {
-  .guardado {
+@media (max-width: 720px) {
+  .detalle {
     grid-template-columns: 1fr;
   }
 }
-/* ---------- Filtro y paginación ---------- */
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+
+/* ---------- Varios ---------- */
+.enlace {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
-.chip {
-  padding: 0.35rem 0.9rem;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.chip[aria-pressed='true'] {
-  background: var(--primary);
-  border-color: transparent;
-  color: var(--on-primary);
-}
-
-.paginacion {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  color: var(--muted);
+.centrado {
+  text-align: center;
 }
