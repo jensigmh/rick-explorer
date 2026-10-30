@@ -1,12 +1,18 @@
+import { Moon, Sun } from 'lucide-react'
+
 function BotonTema({ tema, onCambiar }) {
+  const esOscuro = tema === 'oscuro'
+  const etiqueta = esOscuro ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'
+
   return (
     <button
       type="button"
-      className="btn btn--borde"
+      className="boton-tema"
       onClick={onCambiar}
-      aria-label="Cambiar tema claro u oscuro"
+      aria-label={etiqueta}
+      title={etiqueta}
     >
-      {tema === 'oscuro' ? '☀️' : '🌙'} Tema
+      {esOscuro ? <Sun size={22} /> : <Moon size={22} />}
     </button>
   )
 }

@@ -1,6 +1,6 @@
-function Buscador({ valor, onCambio, onLimpiar }) {
+function Buscador({ valor, onCambio }) {
   return (
-    <div className="panel">
+    <div>
       <label className="etiqueta" htmlFor="buscar">
         Buscar personaje
       </label>
@@ -13,9 +13,7 @@ function Buscador({ valor, onCambio, onLimpiar }) {
           value={valor}
           onChange={(e) => onCambio(e.target.value)}
         />
-        <button type="button" className="btn btn--suave" onClick={onLimpiar}>
-          Limpiar
-        </button>
+    
       </div>
     </div>
   )

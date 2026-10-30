@@ -207,6 +207,7 @@ img {
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 10px;
+  background: var(--surface);
 }
 
 .campo::placeholder {
@@ -452,4 +453,56 @@ textarea.campo {
 
 .centrado {
   text-align: center;
+}
+
+.dato {
+  text-align: center;
+}
+
+/* ---------- Collage de personajes ---------- */
+.collage {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.collage__img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.collage__img + .collage__img {
+  margin-left: -24px;
+}
+
+@media (max-width: 700px) {
+  .collage__img {
+    width: 64px;
+    height: 64px;
+    border-width: 3px;
+  }
+
+  .collage__img + .collage__img {
+    margin-left: -14px;
+  }
+}
+
+/* ---------- Botón de tema ---------- */
+.boton-tema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.boton-tema:hover {
+  color: var(--accent);
 }

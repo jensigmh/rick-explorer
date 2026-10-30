@@ -1,21 +1,18 @@
-import { Link, NavLink } from 'react-router-dom'
+import {NavLink } from 'react-router-dom'
 import BotonTema from './BotonTema.jsx'
 
 function Navbar({ totalGuardados, tema, onCambiarTema }) {
   const enlaces = [
     { to: '/', texto: 'Inicio', end: true },
     { to: '/personajes', texto: 'Personajes' },
-    { to: '/guardados', texto: `Guardados (${totalGuardados})` },
+    { to: '/guardados', texto: 'Guardados' },
     { to: '/acerca', texto: 'Acerca' },
   ]
 
   return (
     <header className="navbar">
       <div className="contenedor navbar__interior">
-        <Link to="/" className="navbar__marca">
-          Rick Explorer
-        </Link>
-
+        
         <nav className="navbar__links" aria-label="Principal">
           {enlaces.map((enlace) => (
             <NavLink

@@ -7,12 +7,11 @@ function AcercaPage() {
   return (
     <main className="contenedor pagina">
       <EncabezadoPagina
-        etiqueta="Proyecto"
         titulo="Acerca de"
         texto="Rick Explorer es el proyecto integrador final del curso de React."
       />
 
-      <div className="panel">
+      <div>
         <p>
           Los datos vienen de{' '}
           <a className="enlace" href="https://rickandmortyapi.com" target="_blank" rel="noreferrer">
@@ -26,9 +25,7 @@ function AcercaPage() {
           <li>Context API (tema y guardados)</li>
           <li>Custom hooks: useFetch, useLocalStorage y useDebounce</li>
         </ul>
-        <p>
-          Tema actual: <strong>{tema}</strong>
-        </p>
+       
       </div>
     </main>
   )

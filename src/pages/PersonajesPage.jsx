@@ -7,7 +7,7 @@ import Paginacion from '../components/Paginacion.jsx'
 import EstadoVista from '../components/EstadoVista.jsx'
 import useFetch from '../hooks/useFetch.js'
 import useDebounce from '../hooks/useDebounce.js'
-import { useGuardados } from '../context/GuardadosContext.jsx'
+import useGuardados from '../hooks/useGuardados.js'
 import { adaptarLista } from '../utils/adaptar.js'
 import { API_URL, OPCIONES_ESTADO } from '../utils/constantes.js'
 
@@ -65,15 +65,12 @@ function PersonajesPage() {
   return (
     <main className="contenedor pagina">
       <EncabezadoPagina
-        etiqueta="Colección"
         titulo="Personajes"
-        texto="Encuentra a tus personajes favoritos."
       />
 
       <Buscador
         valor={busqueda}
         onCambio={cambiarBusqueda}
-        onLimpiar={() => cambiarBusqueda('')}
       />
       <FiltroEstado opciones={OPCIONES_ESTADO} activo={estado} onCambiar={cambiarEstado} />
 
