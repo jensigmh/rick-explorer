@@ -35,10 +35,13 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg);
+  background:
+    linear-gradient(rgba(17, 24, 68, 0.35), rgba(17, 24, 68, 0.55)),
+    url('./assets/fondo-inicio.jpg') center / cover no-repeat fixed;
+  
   color: var(--text);
   line-height: 1.5;
-  transition: background 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
 a {
@@ -335,11 +338,20 @@ textarea.campo {
 
 /* ---------- Navbar ---------- */
 .navbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
   z-index: 10;
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.pagina {
+  display: block;
+  padding-block: 6.5rem 4rem;
 }
 
 .navbar__interior {
@@ -351,11 +363,6 @@ textarea.campo {
   padding-block: 0.75rem;
 }
 
-.navbar__marca {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--accent);
-}
 
 .navbar__links {
   display: flex;
@@ -505,4 +512,73 @@ textarea.campo {
 
 .boton-tema:hover {
   color: var(--accent);
+}
+
+/* ---------- Inicio con imagen de fondo ---------- */
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 7rem 1.5rem 3rem;
+  background:
+    linear-gradient(rgba(17, 24, 68, 0.35), rgba(17, 24, 68, 0.55)),
+    url('./assets/fondo-inicio.jpg') center / cover no-repeat;
+  color: #fff;
+}
+
+.inicio .encabezado__titulo {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.inicio .encabezado__texto,
+.inicio .dato span {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.navbar__logo img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ---------- Texto sobre el fondo oscuro ---------- */
+.pagina {
+  color: #fff;
+}
+
+.pagina .encabezado__etiqueta,
+.pagina .encabezado__texto,
+.resultados,
+.paginacion,
+.estado {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.estado--error {
+  color: #ffb4a9;
+}
+
+.detalle__lista li {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Lo que tiene fondo claro conserva el texto oscuro */
+.tarjeta,
+.panel,
+.guardado,
+.campo {
+  color: var(--text);
+}
+
+.chip {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn--suave,
+.btn--borde {
+  background: var(--surface);
 }

@@ -15,7 +15,7 @@ function TarjetaPersonaje({ personaje, guardado, onToggleGuardado }) {
       <div className="tarjeta__acciones"><Link className="btn" to={`/personajes/${personaje.id}`}>
   Ver detalle
 </Link>
-        
+      
         <button
           type="button"
           className="estrella"

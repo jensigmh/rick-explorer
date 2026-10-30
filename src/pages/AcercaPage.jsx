@@ -1,8 +1,6 @@
 import EncabezadoPagina from '../components/EncabezadoPagina.jsx'
-import { useTema } from '../context/TemaContext.jsx'
 
 function AcercaPage() {
-  const { tema } = useTema()
 
   return (
     <main className="contenedor pagina">

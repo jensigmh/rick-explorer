@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import EstadoVista from '../components/EstadoVista.jsx'
 import useFetch from '../hooks/useFetch.js'
-import useGuardados from '../hooks/useGuardados.js'
-import { useTema } from '../context/TemaContext.jsx'
 import { API_URL } from '../utils/constantes.js'
 import { useMemo } from 'react'
 import { adaptarLista } from '../utils/adaptar.js'
@@ -11,11 +9,10 @@ function InicioPage() {
   const { data, loading, error } = useFetch(API_URL)
   const { personajes } = useMemo(() => adaptarLista(data), [data])
   const reunidos = personajes.slice(0, 6)
-  const { tema, alternarTema } = useTema()
   const totalPersonajes = data?.info?.count
 
   return (
-    <main className="contenedor pagina">
+    <main className="inicio">
       <section className="hero">
         <h1 className="encabezado__titulo">Rick Explorer</h1>
       

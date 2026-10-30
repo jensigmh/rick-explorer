@@ -5,7 +5,7 @@ export const STORAGE_TEMA = 'rick-explorer:tema'
 
 export const OPCIONES_ESTADO = [
   { valor: 'todos', texto: 'Todos' },
-  { valor: 'alive', texto: 'Alive' },
-  { valor: 'dead', texto: 'Dead' },
-  { valor: 'unknown', texto: 'Unknown' },
+  { valor: 'alive', texto: 'Vivos' },
+  { valor: 'dead', texto: 'Muertos' },
+  { valor: 'unknown', texto: 'Desconocidos' },
 ]
