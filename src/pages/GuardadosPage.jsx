@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import EncabezadoPagina from '../components/EncabezadoPagina.jsx'
 import ItemGuardado from '../components/ItemGuardado.jsx'
 import EstadoVista from '../components/EstadoVista.jsx'
-import { useGuardados } from '../context/GuardadosContext.jsx'
+import useGuardados from '../hooks/useGuardados.js'
 
 function GuardadosPage() {
   const { guardados, editarNota, quitarGuardado } = useGuardados()
@@ -10,9 +10,7 @@ function GuardadosPage() {
   return (
     <main className="contenedor pagina">
       <EncabezadoPagina
-        etiqueta="Tu colección"
         titulo="Guardados"
-        texto="Tus personajes favoritos y tus notas."
       />
 
       {guardados.length > 0 ? (

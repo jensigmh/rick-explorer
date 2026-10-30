@@ -4,7 +4,7 @@ import EncabezadoPagina from '../components/EncabezadoPagina.jsx'
 import FormularioNota from '../components/FormularioNota.jsx'
 import EstadoVista from '../components/EstadoVista.jsx'
 import useFetch from '../hooks/useFetch.js'
-import { useGuardados } from '../context/GuardadosContext.jsx'
+import useGuardados from '../hooks/useGuardados.js'
 import { adaptarPersonaje } from '../utils/adaptar.js'
 import { API_URL } from '../utils/constantes.js'
 

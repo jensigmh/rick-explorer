@@ -6,16 +6,15 @@ import DetallePage from './pages/DetallePage.jsx'
 import GuardadosPage from './pages/GuardadosPage.jsx'
 import AcercaPage from './pages/AcercaPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
-import { useGuardados } from './context/GuardadosContext.jsx'
+import useGuardados from './hooks/useGuardados.js'
 import { useTema } from './context/TemaContext.jsx'
 
 function App() {
   const { tema, alternarTema } = useTema()
-  const { guardados } = useGuardados()
-
+  
   return (
     <>
-      <Navbar totalGuardados={guardados.length} tema={tema} onCambiarTema={alternarTema} />
+      <Navbar tema={tema} onCambiarTema={alternarTema} />
       <Routes>
         <Route path="/" element={<InicioPage />} />
         <Route path="/personajes" element={<PersonajesPage />} />
